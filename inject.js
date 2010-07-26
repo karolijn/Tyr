@@ -127,7 +127,7 @@ function receivedPostRanks(ranks)
     if (data != undefined)
     {
       $('<b class="postrank" style="background-color: ' + data['postrank_color'] + ';">' +
-            formatPRNumber(data['postrank']) +
+            formatPostRankNumber(data['postrank']) +
         '</b>').insertBefore(pos);
     }
   });
