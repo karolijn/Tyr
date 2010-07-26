@@ -2,7 +2,10 @@ var links = [];
 var pr_timer = null;
 var level = 1.0;
 
-jQuery.fn.reverse = [].reverse;
+jQuery.fn.reverse = function()
+{
+  return this.pushStack(this.get().reverse(), arguments);
+};
 
 var siteStyles = [
   'td.title a',              // hacker news
