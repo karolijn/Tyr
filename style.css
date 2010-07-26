@@ -1,0 +1,30 @@
+.postrank {
+  color: black;
+
+  display: inline-block;
+  line-height: 16px;
+  vertical-align: top;
+
+  padding-right: 6px;
+  padding-left: 20px;
+  padding-bottom: 0px;
+  width: 20px;
+
+  margin-left: 5px;
+  margin-right: 5px;
+
+  background-repeat: no-repeat;
+  background-position: top left;
+
+  -webkit-border-radius: 3px;
+}
+
+#pr-dropdown {
+  float: left;
+  margin-right: 10px;
+}
+
+option.pr-all { background-color: #fd8; }
+option.pr-good { background-color: #fa6; }
+option.pr-great { background-color: #f94; }
+option.pr-best { background-color: #f72; }

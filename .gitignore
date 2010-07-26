@@ -1,0 +1,8 @@
+Tyr.chromeextension/icon.png
+Tyr.chromeextension/global.js
+Tyr.chromeextension/inject.js
+Tyr.chromeextension/jquery.tools.min.js
+Tyr.chromeextension/md5.js
+Tyr.chromeextension/style.css
+
+*.swp

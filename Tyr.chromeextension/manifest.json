@@ -1,0 +1,19 @@
+{
+    "name": "PostRank Extension",
+    "version": "0.1.0",
+    "description": "PostRank Extension",
+    "background_page": "global.html",
+    "browser_action": {
+        "default_icon": "icon.png"
+    },
+    "permissions": ["http://*/"],
+    "content_scripts": [
+        {
+            "matches": ["http://www.google.com/reader/*", "http://news.ycombinator.com/*",
+                        "http://news.google.com/*", "http://www.reddit.com/*", "https://www.google.com/*",
+                        "http://www.google.com/*", "https://encrypted.google.com/*"],
+            "js": ["jquery.tools.min.js", "md5.js", "chrome-inject.js", "inject.js"],
+            "css": ["style.css", "chrome-style.css"]
+        }
+    ]
+}
