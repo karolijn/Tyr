@@ -2,6 +2,8 @@ var links = [];
 var pr_timer = null;
 var level = 1.0;
 
+jQuery.fn.reverse = [].reverse;
+
 var siteStyles = [
   'td.title a',              // hacker news
   'h2.title a:nth-child(1)', // google news
@@ -105,7 +107,7 @@ function setupPostRankDropdown(obj)
 
 function setupReaderEntries(obj)
 {
-  $(obj).find('.entry-original').each(function(i, obj)
+  $(obj).find('.entry-original').reverse().each(function(i, obj)
   {
     if ($(obj).attr('pr') != 'true')
     {
