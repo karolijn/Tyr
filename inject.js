@@ -155,8 +155,6 @@ function receivedPostRanks(ranks)
 
 function receivedPostRankMetrics(data)
 {
-  console.log(data);
-
   inject = function(i, obj)
   {
     md5 = MD5($(obj).attr('href'));
