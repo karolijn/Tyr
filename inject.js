@@ -32,6 +32,24 @@ function formatPostRankNumber(postrank)
   return postrank + '';
 }
 
+function formatEngagementValue(value)
+{
+  var val = Math.ceil(value) + '';
+
+  var sections = [];
+  while(val.length > 3)
+  {
+    var section = val.substr(val.length - 3);
+    sections.unshift(section);
+    val = val.substr(0, val.length - 3);
+  }
+
+  if (val.length > 0) sections.unshift(val);
+  val = sections.join(',');
+
+  return val;
+}
+
 function cleanMetricName(name)
 {
   name = name.replace(/hn_/, 'Hacker News ');
@@ -163,7 +181,7 @@ function receivedPostRankMetrics(data)
 
       $(obj).attr('title', metrics);
       $(obj).html($(obj).text() + "<span class='comhead' style='font-size: 75%;'> - " +
-                                    Math.ceil(data[md5]['raw']) +
+                                    formatEngagementValue(data[md5]['raw']) +
                                     " engagement points -</span>");
     }
   }
