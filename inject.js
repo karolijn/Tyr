@@ -211,6 +211,8 @@ document.addEventListener('DOMSubtreeModified', function(e) { handleDOMSubtreeMo
 
 $(document).ready(function()
 {
+  loadSettings();
+
   var params = '';
   $.each(getSiteLinks(), function(i, obj) { params += "url[]=" + obj + "&" })
 

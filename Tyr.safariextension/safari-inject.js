@@ -30,7 +30,7 @@ function storeSetting(name, value)
   safari.self.tab.dispatchMessage('storeSetting', {'name' : name, 'value' : value + ''});
 }
 
-$(document).ready(function()
+function loadSettings()
 {
   safari.self.tab.dispatchMessage('loadSettings');
-});
+}
