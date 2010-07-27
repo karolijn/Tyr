@@ -11,7 +11,8 @@ var siteStyles = [
   'td.title a',              // hacker news
   'h2.title a:nth-child(1)', // google news
   'a.title',                 // reddit
-  'a.l'                      // google
+  'a.l',                     // google
+  'a.taggedlink'             // delicious
 ];
 
 function settingsLoaded(settings)

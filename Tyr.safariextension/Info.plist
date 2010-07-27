@@ -50,6 +50,7 @@
       <string>https://*.google.ca/*</string>
       <string>https://encrypted.google.com/*</string>
       <string>http://www.google.com/reader/*</string>
+      <string>http://delicious.com/*</string>
     </array>
   </dict>
   <key>Description</key>
