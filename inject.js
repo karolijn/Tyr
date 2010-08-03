@@ -12,7 +12,8 @@ var siteStyles = [
   'h2.title a:nth-child(1)', // google news
   'a.title',                 // reddit
   'a.l',                     // google
-  'a.taggedlink'             // delicious
+  'a.taggedlink',            // delicious
+  'div.news-body h3 a'       // digg
 ];
 
 function settingsLoaded(settings)
