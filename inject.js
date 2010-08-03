@@ -82,7 +82,10 @@ function shadeByPostRank()
     var post_level = parseFloat(pr.innerHTML);
 
     if (post_level < level)
+    {
       $(obj).fadeTo('slow', Math.max(0.15, (post_level / 10) - 0.2));
+      $(obj).click(function(event) { $(obj).fadeTo('fast', 1.0); });
+    }
     else
       $(obj).fadeTo('slow', 1.0);
   });
