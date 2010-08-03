@@ -88,15 +88,20 @@ function shadeByPostRank()
   });
 }
 
+function setSelected(val)
+{
+  (level == val ? 'selected="selected"' : '')
+}
+
 function setupPostRankDropdown(obj)
 {
   $(obj).attr('pr-injected', 'true');
 
   sel = $('<select id="pr-dropdown">' +
-      '<option value="1.0" class="pr-all"' + (level == 1.0 ? ' selected="selected"' : '') + '>PR all</option>' +
-      '<option value="2.7" class="pr-good"' + (level == 2.7 ? ' selected="selected"' : '') + '>PR good</option>' +
-      '<option value="5.4" class="pr-great"' + (level == 5.4 ? ' selected="selected"' : '') + '>PR great</option>' +
-      '<option value="7.6" class="pr-best"' + (level == 7.6 ? ' selected="selected"' : '') + '>PR best</option>' +
+      '<option value="1.0" class="pr-all"' + setSelected(1.0) + '>PR all</option>' +
+      '<option value="2.7" class="pr-good"' + setSelected(2.7) + '>PR good</option>' +
+      '<option value="5.4" class="pr-great"' + setSelected(5.4) + '>PR great</option>' +
+      '<option value="7.6" class="pr-best"' + setSelected(7.6) + '>PR best</option>' +
     '</select>')
 
   sel.change(function(event)
