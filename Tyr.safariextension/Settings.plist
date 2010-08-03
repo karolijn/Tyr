@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+  <dict>
+    <key>DefaultValue</key>
+    <real>1</real>
+    <key>Key</key>
+    <string>level</string>
+    <key>Title</key>
+    <string>PostRank Level Filter</string>
+    <key>Titles</key>
+    <array>
+      <string>all</string>
+      <string>good</string>
+      <string>great</string>
+      <string>best</string>
+    </array>
+    <key>Type</key>
+    <string>PopUpButton</string>
+    <key>Values</key>
+    <array>
+      <real>1</real>
+      <real>2.7</real>
+      <real>5.4</real>
+      <real>7.6</real>
+    </array>
+  </dict>
+</array>
+</plist>

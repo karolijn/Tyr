@@ -19,6 +19,7 @@ var siteStyles = [
 function settingsLoaded(settings)
 {
   level = parseFloat(settings.level);
+  setupPostRankDropdown($('#chrome-viewer'));
   shadeByPostRank();
 }
 
@@ -94,7 +95,7 @@ function shadeByPostRank()
 
 function setSelected(val)
 {
-  (level == val ? 'selected="selected"' : '')
+  return (level == val ? ' selected="selected"' : '')
 }
 
 function setupPostRankDropdown(obj)
@@ -206,9 +207,6 @@ function receivedPostRankMetrics(data)
 function handleDOMSubtreeModified(event)
 {
   if (!event.target) return;
-
-  if ((event.target.id == 'chrome-viewer') && ($(event.target).attr('pr-injected') != 'true'))
-    setupPostRankDropdown(event.target);
 
   else if (event.target.id == 'entries')
   {
