@@ -55,7 +55,7 @@
     </array>
   </dict>
   <key>Description</key>
-  <string>PostRank Extension</string>
+  <string>Engagement filters &amp; meta-data content scripts</string>
   <key>ExtensionInfoDictionaryVersion</key>
   <string>1.0</string>
   <key>Permissions</key>
