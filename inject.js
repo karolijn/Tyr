@@ -121,13 +121,8 @@ function setupPostRankDropdown(obj)
 
 function setupReaderEntries(obj)
 {
-  $(obj).find('.entry-original').reverse().each(function(i, obj)
-  {
-    if ($(obj).attr('pr') != 'true')
-    {
-      $(obj).attr('pr', 'true');
+  $(obj).find('.entry-original').reverse().each(function(i, obj) {
       links.push($(obj).attr('href'));
-    }
   });
 }
 
@@ -204,17 +199,16 @@ function receivedPostRankMetrics(data)
     $(siteStyles[s]).each(inject);
 }
 
-function handleDOMSubtreeModified(event)
+function handleDOMNodeInserted(event)
 {
   if (!event.target) return;
-
-  else if (event.target.id == 'entries')
+  else if (event.target.className.match(/entry\sentry-/))
   {
     setupReaderEntries(event.target);
     setupPostRankLoadTimer();
   }
 }
-document.addEventListener('DOMSubtreeModified', function(e) { handleDOMSubtreeModified(e) }, false);
+document.addEventListener('DOMNodeInserted', function(e) { handleDOMNodeInserted(e) }, false);
 
 $(document).ready(function()
 {
