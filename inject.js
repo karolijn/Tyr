@@ -147,9 +147,11 @@ function setupPostRankLoadTimer()
 
 function receivedPostRanks(ranks)
 {
-  // TODO: fix walk entire entries list
-  $(document).find('#entries .entry').each(function(i, obj)
+  $(document).find('#entries .entry').reverse().each(function(i, obj)
   {
+    // stop iterator if we have already inserted the postrank data
+    if ($(obj).find('b.postrank').length == 1) { return false; }
+
     var link = $($('a.entry-original', obj)[0]).attr('href');
     var pos = $('h2.entry-title', obj)[0];
 
@@ -209,7 +211,7 @@ function receivedPostRankMetrics(data)
 function handleDOMNodeInserted(event)
 {
   if (!event.target) return;
-  else if (event.target.className.match(/entry\sentry-/))
+  else if (event.target.className && event.target.className.match(/entry\sentry-/))
   {
     setupReaderEntries(event.target);
     setupPostRankLoadTimer();
