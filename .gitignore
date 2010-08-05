@@ -5,4 +5,5 @@ Tyr.chromeextension/jquery.tools.min.js
 Tyr.chromeextension/md5.js
 Tyr.chromeextension/style.css
 
+*.safariextz
 *.swp
