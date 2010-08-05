@@ -1,11 +1,16 @@
 {
     "name": "PostRank Extension",
     "version": "0.1.0",
-    "description": "PostRank Extension",
+    "description": "Engagement filters & meta-data content scripts",
     "background_page": "global.html",
-    "browser_action": {
-        "default_icon": "icon.png"
-    },
+    // "browser_action": {
+        // "default_icon": "icon.png"
+    // },
+    "icons": {
+      "128": "postrank-128.png",
+      "64": "postrank-64.png",
+      "16": "postrank-16.png"
+      },
     "permissions": ["http://*/"],
     "content_scripts": [
         {
