@@ -121,7 +121,7 @@ function setupPostRankDropdown(obj)
 
 function setupReaderEntries(obj)
 {
-  $(obj).find('.entry-original').reverse().each(function(i, obj) {
+  $(obj).find('.entry-original, .entry-title-link').reverse().each(function(i, obj) {
       links.push($(obj).attr('href'));
   });
 }
@@ -147,10 +147,17 @@ function setupPostRankLoadTimer()
 
 function receivedPostRanks(ranks)
 {
+  // TODO: fix walk entire entries list
   $(document).find('#entries .entry').each(function(i, obj)
   {
     var link = $($('a.entry-original', obj)[0]).attr('href');
     var pos = $('h2.entry-title', obj)[0];
+
+    // expanded mode selectors
+    if (typeof(link) == 'undefined') {
+      pos = $('a.entry-title-link', obj)[0];
+      link = $(pos).attr('href');
+    }
 
     var data = ranks[link];
     if (data != undefined)

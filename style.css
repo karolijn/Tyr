@@ -19,6 +19,10 @@
   -webkit-border-radius: 3px;
 }
 
+.card .postrank {
+  font-size: 80%;
+}
+
 #pr-dropdown {
   float: left;
   margin-right: 10px;
